@@ -20,8 +20,7 @@ navigator.notification.alert("onDeviceReady");
 }
 function takePhoto() {
 navigator.camera.getPicture(onCameraSuccess,
-onCameraError, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI });
+onCameraError);
 }
 function onCameraSuccess(imageURL) {
 navigator.notification.alert("onCameraSuccess: " +
