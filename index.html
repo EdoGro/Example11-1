@@ -24,8 +24,8 @@ onCameraError, { quality: 50,
     destinationType: Camera.DestinationType.FILE_URI });
 }
 function onCameraSuccess(imageURL) {
-navigator.notification.alert("onCameraSuccess: " +
-imageURL);
+var image = document.getElementById('myImage');
+    image.src = imageURI;
 }
 function onCameraError(e) {
 navigator.notification.alert("onCameraError: " + e);
@@ -37,6 +37,7 @@ navigator.notification.alert("onCameraError: " + e);
 <p>Usando la API de Cámara de PhoneGap<br />
 <input type="button" value="Take a Picture"
 onclick="takePhoto();">
+    <img id = "myImage"></img>
 </p>
 </body>
 </html>
